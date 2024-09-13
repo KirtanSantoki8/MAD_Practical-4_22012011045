@@ -56,6 +56,7 @@
                 android:textStyle="bold"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/alarmimg"/>
 
@@ -90,6 +91,8 @@
                 android:gravity="center"
                 android:textSize="17sp"
                 android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:format12Hour="hh:mm:ss a dd MMM yyyy"
                 android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
