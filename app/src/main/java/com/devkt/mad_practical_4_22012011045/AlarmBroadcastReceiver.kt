@@ -4,8 +4,6 @@ import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.media.MediaPlayer
-import android.provider.ContactsContract.CommonDataKinds.Note
 import android.util.Log
 
 class AlarmBroadcastReceiver : BroadcastReceiver() {
