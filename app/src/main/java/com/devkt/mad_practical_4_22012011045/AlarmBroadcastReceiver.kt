@@ -17,8 +17,10 @@ class AlarmBroadcastReceiver : BroadcastReceiver() {
             val intentService = Intent(context, AlarmService::class.java)
             intentService.putExtra("Service1", intent.getStringExtra("Service1"))
             if (str1 == "Start") {
+                Log.d("AlarmBroadcastReceiver1", "Starting AlarmService")
                 context.startService(intentService)
             } else if (str1 == "Stop") {
+                Log.d("AlarmBroadcastReceiver2", "Stopping AlarmService")
                 context.stopService(intentService)
             }
         }

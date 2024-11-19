@@ -11,7 +11,7 @@ class AlarmService : Service() {
         TODO("Return the communication channel to the service.")
     }
 
-    var mp: MediaPlayer? = null
+    private var mp: MediaPlayer? = null
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if(intent != null){
             mp = MediaPlayer.create(this,R.raw.alarm)

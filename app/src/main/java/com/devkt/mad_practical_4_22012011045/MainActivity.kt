@@ -5,13 +5,11 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.app.TimePickerDialog
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -101,19 +99,20 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("Service1", "Start")
         val pendingIntent = PendingIntent.getBroadcast(
             applicationContext,
-            2345,
+            2407,
             intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
         val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
         if (str == "Start") {
+            binding.reminderTime.visibility = View.VISIBLE
             if(alarmManager.canScheduleExactAlarms()){
                 alarmManager.setExact(
                     AlarmManager.RTC_WAKEUP,
                     millisTime,
                     pendingIntent
                 )
-                Toast.makeText(this, "Alarm set", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this, "Alarm set", Toast.LENGTH_SHORT).show()
             }
         } else if (str == "Stop") {
             alarmManager.cancel(pendingIntent)
